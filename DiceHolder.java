@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 public class DiceHolder{
 
-	Die die = new Die ();
-	private ArrayList <String> container = new ArrayList <> ();
+
+	private ArrayList <Die> container;
 
 	public DiceHolder(){
 
+	container = new ArrayList <Die> ();
 
 	}
 
@@ -27,8 +28,7 @@ public class DiceHolder{
 
 		for (int i = 0; i < container.size(); i++){
 
-			die.roll(container.get(i));
-			container.set(i, die);
+			(container.get(i)).roll();
 		}
 	}
 
