@@ -34,10 +34,13 @@ public class DiceHolder{
 
 	public String toString(){
 
+		String s = "";
+
 		for (int i = 0; i < container.size(); i++){
 
-			return container.get(i);
+			s+="Die "+(i+1)+": "+container.get(i).getValue()+" ";
 		}
 
+		return s;
 	}
 }
