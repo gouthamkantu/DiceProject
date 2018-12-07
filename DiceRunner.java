@@ -7,7 +7,7 @@ public class DiceRunner{
 	Die a = new Die ();
 	Die b = new Die();
 
-	int count = 0;
+	int count = 1;
 
 	while ((a.getValue()!=1)||(b.getValue()!=1)){
 
@@ -25,18 +25,21 @@ public class DiceRunner{
 	//Test2
 
 	int i = 1;
+	count = 1;
 
 	DiceHolder holder = new DiceHolder();
 
 		while (i==1){
 			i = holder.addDie(new Die((int)(Math.random()*100)+2));
 
-			System.out.println(holder);
+			System.out.println("Die "+count+" added: "+holder+" ");
+
+			count++;
 
 		}
 
 		holder.shake();
-		System.out.println(holder);
+		System.out.println("Final dice holder: "+holder);
 
 
 

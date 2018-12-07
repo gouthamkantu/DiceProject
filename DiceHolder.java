@@ -12,13 +12,14 @@ public class DiceHolder{
 
 	public int addDie (Die die){
 
-		while(container.size() <= 5){
+		while(container.size() < 5){
 
 			container.add(die);
 			return 1;
 
 			}
 
+			container.add(die);
 			return -1;
 
 
